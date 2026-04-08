@@ -157,7 +157,8 @@ def _warmup_liger(T, E, H, intermediate_dim, K, dtype, sweep_dim):
     warmup_out = warmup_fn()
     warmup_out.sum().backward()
     del warmup_out
-    torch.cuda.synchronize()
+    # torch.cuda.synchronize()
+    torch.npu.synchronize()
 
 
 # ---------------------------------------------------------------------------
@@ -231,7 +232,8 @@ if __name__ == "__main__":
             print(f"  warmup E={e_val}...")
             _warmup_liger(probe_T, e_val, H, intermediate_dim, K, dtype, sweep_dim="E")
 
-    torch.cuda.synchronize()
+    # torch.cuda.synchronize()
+    torch.npu.synchronize()
     print("Autotune warmup complete.\n")
 
     if args.sweep_dim == "num_tokens":
