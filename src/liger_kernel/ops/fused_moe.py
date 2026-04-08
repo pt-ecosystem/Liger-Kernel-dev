@@ -16,7 +16,7 @@ from liger_kernel.ops.fused_moe_kernels import _moe_bwd_dW2_kernel
 from liger_kernel.ops.fused_moe_kernels import _moe_bwd_dX_expanded_kernel
 from liger_kernel.ops.fused_moe_kernels import _moe_router_histogram_kernel
 from liger_kernel.ops.fused_moe_kernels import _moe_router_prefix_sum_kernel
-from liger_kernel.ops.fused_moe_kernels import _moe_router_scatter_kernel
+from liger_kernel.ops.fused_moe_kernels import _moe_router_scatter_torch
 from liger_kernel.ops.fused_moe_kernels import _token_gather_weighted_sum_kernel
 from liger_kernel.ops.utils import ensure_contiguous
 
@@ -104,7 +104,10 @@ def compute_routing_metadata(topk_indices: torch.Tensor, E: int, block_m_token: 
     x_gather_idx = torch.empty(TK, dtype=torch.int32, device=device)
 
     if TK > 0:
-        _moe_router_scatter_kernel[(n_tiles,)](
+        # Triton `_moe_router_scatter_kernel` uses uint32; use PyTorch on backends
+        # that do not support it (e.g. triton-ascend). Swap back to the Triton kernel
+        # when the compiler supports uint32.
+        _moe_router_scatter_torch(
             s_scatter_idx,
             s_reverse_scatter_idx,
             x_gather_idx,
@@ -112,10 +115,10 @@ def compute_routing_metadata(topk_indices: torch.Tensor, E: int, block_m_token: 
             tile_expert,
             topk_indices,
             T,
-            tile_expert_counts,  # non-contiguous (E, n_tiles) view
+            tile_expert_counts,
             n_tiles,
-            expert_start_idx[:E],  # E entries (without TK sentinel)
-            expert_tile_offset[:E],  # E entries of cumulative tile counts
+            expert_start_idx[:E],
+            expert_tile_offset[:E],
             K_POW2=K_POW2,
             K=K,
             TOKENS_PER_BLOCK=TOKENS_PER_BLOCK,

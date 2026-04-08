@@ -8,6 +8,7 @@
 # inspired by the SonicMoE paper (arXiv:2512.14080), ported to portable Triton
 # (no Hopper-specific WGMMA/TMA) for general GPU support.
 
+import torch
 import triton
 import triton.language as tl
 
@@ -94,23 +95,22 @@ def _moe_router_histogram_kernel(
         mask=e_offs < E,
     )
 
-    # Load all (token, k) expert assignments for this tile as a 2-D block.
-    # Using 2-D indexing avoids div/mod and is faster for non-power-of-2 K.
-    tok_offs = tile_id * TOKENS_PER_TILE + tl.arange(0, TOKENS_PER_TILE)
-    k_offs = tl.arange(0, K_POW2)
+    # Flat (token, k) lanes: keep everything 1-D so backends never need
+    # tensor.reshape → memref.collapse_shape on a strided 2-D block (Ascend
+    # BiSheng rejects collapsing non-contiguous dims for i1 masks).
+    flat = tl.arange(0, TOKENS_PER_TILE * K_POW2)
+    tok_rel = flat // K_POW2
+    k_lane = flat % K_POW2
+    tok_offs = tile_id * TOKENS_PER_TILE + tok_rel
     tok_mask = tok_offs < T
-    load_mask = tok_mask[:, None] & (k_offs[None, :] < K)
-    safe_k = tl.minimum(k_offs, K - 1)  # clamp for out-of-bounds k slots
+    flat_mask = tok_mask & (k_lane < K)
+    safe_k = tl.minimum(k_lane, K - 1)
     expert_ids = tl.load(
-        topk_indices_ptr + tok_offs[:, None] * K + safe_k[None, :],
-        mask=load_mask,
+        topk_indices_ptr + tok_offs * K + safe_k,
+        mask=flat_mask,
         other=-1,
     )
-
-    # Flatten and atomically histogram into partial_sum[:, tile_id].
-    flat_experts = tl.reshape(expert_ids, [TOKENS_PER_TILE * K_POW2])
-    flat_mask = tl.reshape(load_mask, [TOKENS_PER_TILE * K_POW2])
-    safe_experts = tl.where(flat_mask, flat_experts, 0)  # redirect masked lanes to expert 0
+    safe_experts = tl.where(flat_mask, expert_ids, 0)
 
     tl.atomic_add(
         partial_sum_ptr + safe_experts * n_tiles + tile_id,
@@ -297,6 +297,99 @@ def _moe_router_scatter_kernel(
         tl.store(s_reverse_scatter_idx_ptr + entry_idx, s_reverse, mask=mask)
         tl.store(s_scatter_idx_ptr + s_reverse, entry_idx, mask=mask)
         tl.store(x_gather_idx_ptr + s_reverse, token_i_global_s, mask=mask)
+
+
+def _moe_router_scatter_torch(
+    s_scatter_idx: torch.Tensor,
+    s_reverse_scatter_idx: torch.Tensor,
+    x_gather_idx: torch.Tensor,
+    tile_row_start: torch.Tensor,
+    tile_expert: torch.Tensor,
+    topk_indices: torch.Tensor,
+    T: int,
+    partial_sum: torch.Tensor,
+    n_tiles: int,
+    expert_offs: torch.Tensor,
+    expert_tile_offset: torch.Tensor,
+    K_POW2: int,
+    K: int,
+    TOKENS_PER_BLOCK: int,
+    BLOCK_M_TOKEN: int,
+) -> None:
+    """PyTorch reference for `_moe_router_scatter_kernel` (routing metadata K3).
+
+    Used when the Triton kernel cannot compile (e.g. Ascend without uint32).
+    Matches the Triton kernel's outputs for valid (token, k) lanes.
+    """
+    device = topk_indices.device
+    BLOCK_SIZE = TOKENS_PER_BLOCK * K_POW2
+    is_pow2_k = K == K_POW2
+    E = partial_sum.shape[0]
+
+    offs_local = torch.arange(BLOCK_SIZE, device=device, dtype=torch.int64)
+    flat_topk = topk_indices.reshape(T * K)
+
+    for pid_m in range(n_tiles):
+        offs_global = pid_m * BLOCK_SIZE + offs_local
+        mask_bounds = offs_global < (T * K_POW2)
+
+        expert = torch.full((BLOCK_SIZE,), -1, dtype=torch.int32, device=device)
+        if is_pow2_k:
+            m = offs_global < (T * K)
+            expert[m] = flat_topk[offs_global[m].to(torch.int64)]
+        else:
+            token_i_local = offs_local // K_POW2
+            k_slot = offs_local % K_POW2
+            token_i_global = pid_m * TOKENS_PER_BLOCK + token_i_local
+            load_mask = mask_bounds & (k_slot < K)
+            sk = torch.minimum(k_slot, torch.tensor(K - 1, device=device, dtype=torch.int64))
+            ti = token_i_global.to(torch.int64)
+            expert[load_mask] = topk_indices[ti[load_mask], sk[load_mask]]
+
+        exp_u = expert.to(torch.int64) & 0xFFFFFFFF
+        key = (exp_u << 16) | (offs_local & 0xFFFF)
+        kv_sorted, _ = torch.sort(key)
+
+        expert_sorted = ((kv_sorted >> 16) & 0xFFFF).to(torch.int32)
+        mask_valid = expert_sorted != 0xFFFF
+
+        idx = torch.arange(BLOCK_SIZE, device=device, dtype=torch.int64)
+        hi = (kv_sorted >> 16) & 0xFFFF
+        new_seg = torch.zeros(BLOCK_SIZE, dtype=torch.bool, device=device)
+        new_seg[0] = True
+        new_seg[1:] = hi[1:] != hi[:-1]
+        marker = torch.full((BLOCK_SIZE,), -1, dtype=torch.int64, device=device)
+        marker[new_seg] = idx[new_seg]
+        seg_head, _ = torch.cummax(marker, dim=0)
+        within_expert_rank = (idx - seg_head).to(torch.int32)
+
+        ex_gather = torch.where(mask_valid, expert_sorted.long(), torch.zeros_like(expert_sorted.long()))
+        within_ex = partial_sum[ex_gather, pid_m] + within_expert_rank
+        expert_start = expert_offs[ex_gather]
+        s_reverse = expert_start + within_ex
+
+        is_tile_start = (within_ex % BLOCK_M_TOKEN) == 0
+        t_within = within_ex // BLOCK_M_TOKEN
+        tile_base = expert_tile_offset[ex_gather]
+        flat_tile_idx = tile_base + t_within
+        m_tile = mask_valid & is_tile_start
+        tile_row_start[flat_tile_idx[m_tile]] = s_reverse[m_tile].to(torch.int32)
+        tile_expert[flat_tile_idx[m_tile]] = expert_sorted[m_tile].to(torch.int32)
+
+        presort_offs = (kv_sorted & 0xFFFF).to(torch.int64)
+        if is_pow2_k:
+            entry_idx = pid_m * BLOCK_SIZE + presort_offs
+            m = mask_valid
+            s_reverse_scatter_idx[entry_idx[m]] = s_reverse[m].to(torch.int32)
+            s_scatter_idx[s_reverse[m].to(torch.int64)] = entry_idx[m].to(torch.int32)
+            x_gather_idx[s_reverse[m].to(torch.int64)] = (entry_idx[m] // K_POW2).to(torch.int32)
+        else:
+            token_i_global_s = pid_m * TOKENS_PER_BLOCK + presort_offs // K_POW2
+            entry_idx = token_i_global_s * K + presort_offs % K_POW2
+            m = mask_valid
+            s_reverse_scatter_idx[entry_idx[m].to(torch.int64)] = s_reverse[m].to(torch.int32)
+            s_scatter_idx[s_reverse[m].to(torch.int64)] = entry_idx[m].to(torch.int32)
+            x_gather_idx[s_reverse[m].to(torch.int64)] = token_i_global_s[m].to(torch.int32)
 
 
 # ---------------------------------------------------------------------------
@@ -537,28 +630,30 @@ def _token_gather_weighted_sum_kernel(
 ):
     """One CTA per token. Gathers K expert outputs, reduces with routing weights
     (forward) or without weights (backward dx via _token_broadcast_backward)."""
-    t = tl.program_id(0).to(tl.uint32)
+    # int32 indices; avoid 2-D pointer tiles (perm[:, None] + h[None, :]) which
+    # can make tt.addptr fan out to multiple users and break Ascend's
+    # BlockPtrAnalysis (rewriteAddPtrToUnstrucMemAcc expects single-use addptr).
+    t = tl.program_id(0).to(tl.int32)
 
     for h_tile in tl.static_range(triton.cdiv(H_dim, BLOCK_H)):
-        h_idx = (h_tile * BLOCK_H + tl.arange(0, BLOCK_H)).to(tl.uint32)
+        h_idx = h_tile * BLOCK_H + tl.arange(0, BLOCK_H)
         h_mask = h_idx < H_dim
         acc = tl.zeros([BLOCK_H], dtype=tl.float32)
 
         for k_tile in tl.range(triton.cdiv(K_dim, BLOCK_K)):
-            k_offs = (k_tile * BLOCK_K + tl.arange(0, BLOCK_K)).to(tl.uint32)
-            k_mask = k_offs < K_dim
-
-            flat_idx = t * K_dim + k_offs
-            perm_idx = tl.load(s_rev_ptr + flat_idx, mask=k_mask, other=0).to(tl.uint32)
-
-            y_ptrs = Y_ptr + perm_idx[:, None] * stride_Y_TK + h_idx[None, :] * stride_Y_H
-            y_vals = tl.load(y_ptrs, mask=k_mask[:, None] & h_mask[None, :], other=0.0).to(tl.float32)
-
-            if w_is_None:
-                acc += tl.sum(y_vals, axis=0)
-            else:
-                w_vals = tl.load(w_ptr + flat_idx, mask=k_mask, other=0.0).to(tl.float32)
-                acc += tl.sum(y_vals * w_vals[:, None], axis=0)
+            k_base = k_tile * BLOCK_K
+            for ki in tl.static_range(BLOCK_K):
+                k_off = k_base + ki
+                k_valid = k_off < K_dim
+                flat_idx = t * K_dim + k_off
+                perm_idx = tl.load(s_rev_ptr + flat_idx, mask=k_valid, other=0)
+                y_ptrs = Y_ptr + perm_idx * stride_Y_TK + h_idx * stride_Y_H
+                y_row = tl.load(y_ptrs, mask=h_mask & k_valid, other=0.0).to(tl.float32)
+                if w_is_None:
+                    acc += y_row
+                else:
+                    w_val = tl.load(w_ptr + flat_idx, mask=k_valid, other=0.0).to(tl.float32)
+                    acc += y_row * w_val
 
         out_ptrs = out_ptr + t * stride_out_T + h_idx * stride_out_H
         tl.store(out_ptrs, acc.to(out_ptr.dtype.element_ty), mask=h_mask)
