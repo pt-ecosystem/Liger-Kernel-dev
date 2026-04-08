@@ -1,0 +1,940 @@
+Model: qwen3_moe_30b — E=128, H=2048, intermediate_dim=768, K=8, T_base=8192, dtype=torch.bfloat16
+Pre-warming Liger autotune (H=2048, intermediate_dim=768)...
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+[WARNING] Please DO NOT tune args ['num_warps', 'num_ctas', 'num_stages', 'num_buffers_warp_spec', 'num_consumer_groups', 'reg_dec_producer', 'reg_inc_consumer', 'force_simt_template', 'enable_linearize']!
+Autotune warmup complete.
+
+**************************************
+     BENCHMARKING SPEED for FUSED_MOE
+**************************************
+********** Benchmark Data **********
+[
+  {
+    "kernel_name": "fused_moe",
+    "kernel_provider": "liger",
+    "metric_name": "speed",
+    "metric_unit": "ms",
+    "gpu_name": "Ascend910B2",
+    "x_name": "T",
+    "x_label": "num_tokens",
+    "x_values": [
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192,
+      16384,
+      32768
+    ],
+    "y_values_50": [
+      201.18026733398438,
+      181.24545288085938,
+      169.43423461914062,
+      164.6510467529297,
+      197.1688995361328,
+      276.18243408203125,
+      471.8993835449219,
+      872.1897583007812,
+      1648.8121337890625
+    ],
+    "y_values_20": [
+      201.18026733398438,
+      181.24545288085938,
+      169.43423461914062,
+      164.6510467529297,
+      197.1688995361328,
+      276.18243408203125,
+      471.8993835449219,
+      872.1897583007812,
+      1648.8121337890625
+    ],
+    "y_values_80": [
+      201.18026733398438,
+      181.24545288085938,
+      169.43423461914062,
+      164.6510467529297,
+      197.1688995361328,
+      276.18243408203125,
+      471.8993835449219,
+      872.1897583007812,
+      1648.8121337890625
+    ],
+    "timestamp": "2026-04-08 17:08:03",
+    "kernel_operation_mode": "full",
+    "extra_benchmark_config_str": "{\"sweep_dim\": \"T\", \"T\": null, \"E\": 128, \"H\": 2048, \"intermediate_dim\": 768, \"K\": 8, \"dtype\": \"torch.bfloat16\"}",
+    "liger_version": "0.7.0"
+  },
+  {
+    "kernel_name": "fused_moe",
+    "kernel_provider": "huggingface",
+    "metric_name": "speed",
+    "metric_unit": "ms",
+    "gpu_name": "Ascend910B2",
+    "x_name": "T",
+    "x_label": "num_tokens",
+    "x_values": [
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192,
+      16384,
+      32768
+    ],
+    "y_values_50": [
+      721.8860473632812,
+      718.6791381835938,
+      731.2233276367188,
+      739.4756469726562,
+      744.70849609375,
+      792.0503540039062,
+      848.91015625,
+      946.961181640625,
+      1101.630859375
+    ],
+    "y_values_20": [
+      721.8860473632812,
+      718.6791381835938,
+      731.2233276367188,
+      739.4756469726562,
+      744.70849609375,
+      792.0503540039062,
+      848.91015625,
+      946.961181640625,
+      1101.630859375
+    ],
+    "y_values_80": [
+      721.8860473632812,
+      718.6791381835938,
+      731.2233276367188,
+      739.4756469726562,
+      744.70849609375,
+      792.0503540039062,
+      848.91015625,
+      946.961181640625,
+      1101.630859375
+    ],
+    "timestamp": "2026-04-08 17:09:03",
+    "kernel_operation_mode": "full",
+    "extra_benchmark_config_str": "{\"sweep_dim\": \"T\", \"T\": null, \"E\": 128, \"H\": 2048, \"intermediate_dim\": 768, \"K\": 8, \"dtype\": \"torch.bfloat16\"}",
+    "liger_version": "0.7.0"
+  },
+  {
+    "kernel_name": "fused_moe",
+    "kernel_provider": "liger",
+    "metric_name": "speed",
+    "metric_unit": "ms",
+    "gpu_name": "Ascend910B2",
+    "x_name": "T",
+    "x_label": "num_tokens",
+    "x_values": [
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192,
+      16384,
+      32768
+    ],
+    "y_values_50": [
+      99.53022003173828,
+      89.4460220336914,
+      87.58915710449219,
+      98.42752075195312,
+      133.2872772216797,
+      211.0316162109375,
+      400.2739562988281,
+      774.5482177734375,
+      1470.78515625
+    ],
+    "y_values_20": [
+      99.53022003173828,
+      89.4460220336914,
+      87.58915710449219,
+      98.42752075195312,
+      133.2872772216797,
+      211.0316162109375,
+      400.2739562988281,
+      774.5482177734375,
+      1470.78515625
+    ],
+    "y_values_80": [
+      99.53022003173828,
+      89.4460220336914,
+      87.58915710449219,
+      98.42752075195312,
+      133.2872772216797,
+      211.0316162109375,
+      400.2739562988281,
+      774.5482177734375,
+      1470.78515625
+    ],
+    "timestamp": "2026-04-08 17:09:31",
+    "kernel_operation_mode": "forward",
+    "extra_benchmark_config_str": "{\"sweep_dim\": \"T\", \"T\": null, \"E\": 128, \"H\": 2048, \"intermediate_dim\": 768, \"K\": 8, \"dtype\": \"torch.bfloat16\"}",
+    "liger_version": "0.7.0"
+  },
+  {
+    "kernel_name": "fused_moe",
+    "kernel_provider": "huggingface",
+    "metric_name": "speed",
+    "metric_unit": "ms",
+    "gpu_name": "Ascend910B2",
+    "x_name": "T",
+    "x_label": "num_tokens",
+    "x_values": [
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192,
+      16384,
+      32768
+    ],
+    "y_values_50": [
+      164.357177734375,
+      169.74549865722656,
+      168.3737030029297,
+      184.54287719726562,
+      193.21449279785156,
+      204.37527465820312,
+      225.21710205078125,
+      280.7284240722656,
+      384.8898010253906
+    ],
+    "y_values_20": [
+      164.357177734375,
+      169.74549865722656,
+      168.3737030029297,
+      184.54287719726562,
+      193.21449279785156,
+      204.37527465820312,
+      225.21710205078125,
+      280.7284240722656,
+      384.8898010253906
+    ],
+    "y_values_80": [
+      164.357177734375,
+      169.74549865722656,
+      168.3737030029297,
+      184.54287719726562,
+      193.21449279785156,
+      204.37527465820312,
+      225.21710205078125,
+      280.7284240722656,
+      384.8898010253906
+    ],
+    "timestamp": "2026-04-08 17:09:47",
+    "kernel_operation_mode": "forward",
+    "extra_benchmark_config_str": "{\"sweep_dim\": \"T\", \"T\": null, \"E\": 128, \"H\": 2048, \"intermediate_dim\": 768, \"K\": 8, \"dtype\": \"torch.bfloat16\"}",
+    "liger_version": "0.7.0"
+  },
+  {
+    "kernel_name": "fused_moe",
+    "kernel_provider": "liger",
+    "metric_name": "speed",
+    "metric_unit": "ms",
+    "gpu_name": "Ascend910B2",
+    "x_name": "T",
+    "x_label": "num_tokens",
+    "x_values": [
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192,
+      16384,
+      32768
+    ],
+    "y_values_50": [
+      105.67938232421875,
+      90.77226257324219,
+      89.87803649902344,
+      71.9207992553711,
+      60.80268096923828,
+      60.676841735839844,
+      74.38005828857422,
+      118.60489654541016,
+      206.21884155273438
+    ],
+    "y_values_20": [
+      105.67938232421875,
+      90.77226257324219,
+      89.87803649902344,
+      71.9207992553711,
+      60.80268096923828,
+      60.676841735839844,
+      74.38005828857422,
+      118.60489654541016,
+      206.21884155273438
+    ],
+    "y_values_80": [
+      105.67938232421875,
+      90.77226257324219,
+      89.87803649902344,
+      71.9207992553711,
+      60.80268096923828,
+      60.676841735839844,
+      74.38005828857422,
+      118.60489654541016,
+      206.21884155273438
+    ],
+    "timestamp": "2026-04-08 17:09:58",
+    "kernel_operation_mode": "backward",
+    "extra_benchmark_config_str": "{\"sweep_dim\": \"T\", \"T\": null, \"E\": 128, \"H\": 2048, \"intermediate_dim\": 768, \"K\": 8, \"dtype\": \"torch.bfloat16\"}",
+    "liger_version": "0.7.0"
+  },
+  {
+    "kernel_name": "fused_moe",
+    "kernel_provider": "huggingface",
+    "metric_name": "speed",
+    "metric_unit": "ms",
+    "gpu_name": "Ascend910B2",
+    "x_name": "T",
+    "x_label": "num_tokens",
+    "x_values": [
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192,
+      16384,
+      32768
+    ],
+    "y_values_50": [
+      551.7672729492188,
+      555.5194702148438,
+      561.3089599609375,
+      568.3946533203125,
+      576.7094116210938,
+      590.8037719726562,
+      619.1525268554688,
+      670.9052124023438,
+      713.342529296875
+    ],
+    "y_values_20": [
+      551.7672729492188,
+      555.5194702148438,
+      561.3089599609375,
+      568.3946533203125,
+      576.7094116210938,
+      590.8037719726562,
+      619.1525268554688,
+      670.9052124023438,
+      713.342529296875
+    ],
+    "y_values_80": [
+      551.7672729492188,
+      555.5194702148438,
+      561.3089599609375,
+      568.3946533203125,
+      576.7094116210938,
+      590.8037719726562,
+      619.1525268554688,
+      670.9052124023438,
+      713.342529296875
+    ],
+    "timestamp": "2026-04-08 17:10:44",
+    "kernel_operation_mode": "backward",
+    "extra_benchmark_config_str": "{\"sweep_dim\": \"T\", \"T\": null, \"E\": 128, \"H\": 2048, \"intermediate_dim\": 768, \"K\": 8, \"dtype\": \"torch.bfloat16\"}",
+    "liger_version": "0.7.0"
+  }
+]
+**************************************
+     BENCHMARKING MEMORY for FUSED_MOE
+**************************************
+********** Benchmark Data **********
+[
+  {
+    "kernel_name": "fused_moe",
+    "kernel_provider": "liger",
+    "metric_name": "memory",
+    "metric_unit": "MB",
+    "gpu_name": "Ascend910B2",
+    "x_name": "T",
+    "x_label": "num_tokens",
+    "x_values": [
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192,
+      16384,
+      32768
+    ],
+    "y_values_50": [
+      4997.0322265625,
+      5005.04833984375,
+      5012.0908203125,
+      5032.1689453125,
+      5072.326171875,
+      5152.640625,
+      5521.39697265625,
+      6418.77978515625,
+      8217.541015625
+    ],
+    "y_values_20": [
+      4997.0322265625,
+      5005.04833984375,
+      5012.0908203125,
+      5032.1689453125,
+      5072.326171875,
+      5152.640625,
+      5521.39697265625,
+      6418.77978515625,
+      8217.541015625
+    ],
+    "y_values_80": [
+      4997.0322265625,
+      5005.04833984375,
+      5012.0908203125,
+      5032.1689453125,
+      5072.326171875,
+      5152.640625,
+      5521.39697265625,
+      6418.77978515625,
+      8217.541015625
+    ],
+    "timestamp": "2026-04-08 17:11:27",
+    "kernel_operation_mode": "full",
+    "extra_benchmark_config_str": "{\"sweep_dim\": \"T\", \"T\": null, \"E\": 128, \"H\": 2048, \"intermediate_dim\": 768, \"K\": 8, \"dtype\": \"torch.bfloat16\"}",
+    "liger_version": "0.7.0"
+  },
+  {
+    "kernel_name": "fused_moe",
+    "kernel_provider": "huggingface",
+    "metric_name": "memory",
+    "metric_unit": "MB",
+    "gpu_name": "Ascend910B2",
+    "x_name": "T",
+    "x_label": "num_tokens",
+    "x_values": [
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192,
+      16384,
+      32768
+    ],
+    "y_values_50": [
+      5405.087890625,
+      5431.63232421875,
+      5472.73046875,
+      5562.9296875,
+      5743.27734375,
+      6109.728515625,
+      6830.7333984375,
+      8273.728515625,
+      11159.279296875
+    ],
+    "y_values_20": [
+      5405.087890625,
+      5431.63232421875,
+      5472.73046875,
+      5562.9296875,
+      5743.27734375,
+      6109.728515625,
+      6830.7333984375,
+      8273.728515625,
+      11159.279296875
+    ],
+    "y_values_80": [
+      5405.087890625,
+      5431.63232421875,
+      5472.73046875,
+      5562.9296875,
+      5743.27734375,
+      6109.728515625,
+      6830.7333984375,
+      8273.728515625,
+      11159.279296875
+    ],
+    "timestamp": "2026-04-08 17:12:40",
+    "kernel_operation_mode": "full",
+    "extra_benchmark_config_str": "{\"sweep_dim\": \"T\", \"T\": null, \"E\": 128, \"H\": 2048, \"intermediate_dim\": 768, \"K\": 8, \"dtype\": \"torch.bfloat16\"}",
+    "liger_version": "0.7.0"
+  },
+  {
+    "kernel_name": "fused_moe",
+    "kernel_provider": "liger",
+    "metric_name": "memory",
+    "metric_unit": "MB",
+    "gpu_name": "Ascend910B2",
+    "x_name": "T",
+    "x_label": "num_tokens",
+    "x_values": [
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192,
+      16384,
+      32768
+    ],
+    "y_values_50": [
+      2501.52685546875,
+      2506.04541015625,
+      2516.08056640625,
+      2536.15087890625,
+      2576.29248046875,
+      2656.57568359375,
+      2913.142578125,
+      3522.275390625,
+      4743.5380859375
+    ],
+    "y_values_20": [
+      2501.52685546875,
+      2506.04541015625,
+      2516.08056640625,
+      2536.15087890625,
+      2576.29248046875,
+      2656.57568359375,
+      2913.142578125,
+      3522.275390625,
+      4743.5380859375
+    ],
+    "y_values_80": [
+      2501.52685546875,
+      2506.04541015625,
+      2516.08056640625,
+      2536.15087890625,
+      2576.29248046875,
+      2656.57568359375,
+      2913.142578125,
+      3522.275390625,
+      4743.5380859375
+    ],
+    "timestamp": "2026-04-08 17:13:15",
+    "kernel_operation_mode": "forward",
+    "extra_benchmark_config_str": "{\"sweep_dim\": \"T\", \"T\": null, \"E\": 128, \"H\": 2048, \"intermediate_dim\": 768, \"K\": 8, \"dtype\": \"torch.bfloat16\"}",
+    "liger_version": "0.7.0"
+  },
+  {
+    "kernel_name": "fused_moe",
+    "kernel_provider": "huggingface",
+    "metric_name": "memory",
+    "metric_unit": "MB",
+    "gpu_name": "Ascend910B2",
+    "x_name": "T",
+    "x_label": "num_tokens",
+    "x_values": [
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192,
+      16384,
+      32768
+    ],
+    "y_values_50": [
+      2343.51416015625,
+      2365.52001953125,
+      2408.53271484375,
+      2496.556640625,
+      2672.60546875,
+      3029.05810546875,
+      3732.4541015625,
+      5142.2158203125,
+      7959.02392578125
+    ],
+    "y_values_20": [
+      2343.51416015625,
+      2365.52001953125,
+      2408.53271484375,
+      2496.556640625,
+      2672.60546875,
+      3029.05810546875,
+      3732.4541015625,
+      5142.2158203125,
+      7959.02392578125
+    ],
+    "y_values_80": [
+      2343.51416015625,
+      2365.52001953125,
+      2408.53271484375,
+      2496.556640625,
+      2672.60546875,
+      3029.05810546875,
+      3732.4541015625,
+      5142.2158203125,
+      7959.02392578125
+    ],
+    "timestamp": "2026-04-08 17:13:35",
+    "kernel_operation_mode": "forward",
+    "extra_benchmark_config_str": "{\"sweep_dim\": \"T\", \"T\": null, \"E\": 128, \"H\": 2048, \"intermediate_dim\": 768, \"K\": 8, \"dtype\": \"torch.bfloat16\"}",
+    "liger_version": "0.7.0"
+  },
+  {
+    "kernel_name": "fused_moe",
+    "kernel_provider": "liger",
+    "metric_name": "memory",
+    "metric_unit": "MB",
+    "gpu_name": "Ascend910B2",
+    "x_name": "T",
+    "x_label": "num_tokens",
+    "x_values": [
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192,
+      16384,
+      32768
+    ],
+    "y_values_50": [
+      4997.0322265625,
+      5005.04833984375,
+      5012.0908203125,
+      5032.1689453125,
+      5072.326171875,
+      5152.640625,
+      5521.39697265625,
+      6418.77978515625,
+      8216.54296875
+    ],
+    "y_values_20": [
+      4997.0322265625,
+      5005.04833984375,
+      5012.0908203125,
+      5032.1689453125,
+      5072.326171875,
+      5152.640625,
+      5521.39697265625,
+      6418.77978515625,
+      8216.54296875
+    ],
+    "y_values_80": [
+      4997.0322265625,
+      5005.04833984375,
+      5012.0908203125,
+      5032.1689453125,
+      5072.326171875,
+      5152.640625,
+      5521.39697265625,
+      6418.77978515625,
+      8216.54296875
+    ],
+    "timestamp": "2026-04-08 17:13:46",
+    "kernel_operation_mode": "backward",
+    "extra_benchmark_config_str": "{\"sweep_dim\": \"T\", \"T\": null, \"E\": 128, \"H\": 2048, \"intermediate_dim\": 768, \"K\": 8, \"dtype\": \"torch.bfloat16\"}",
+    "liger_version": "0.7.0"
+  },
+  {
+    "kernel_name": "fused_moe",
+    "kernel_provider": "huggingface",
+    "metric_name": "memory",
+    "metric_unit": "MB",
+    "gpu_name": "Ascend910B2",
+    "x_name": "T",
+    "x_label": "num_tokens",
+    "x_values": [
+      128,
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192,
+      16384,
+      32768
+    ],
+    "y_values_50": [
+      5405.087890625,
+      5431.63232421875,
+      5472.73046875,
+      5562.9296875,
+      5743.27734375,
+      6109.17919921875,
+      6828.947265625,
+      8273.04296875,
+      11158.4169921875
+    ],
+    "y_values_20": [
+      5405.087890625,
+      5431.63232421875,
+      5472.73046875,
+      5562.9296875,
+      5743.27734375,
+      6109.17919921875,
+      6828.947265625,
+      8273.04296875,
+      11158.4169921875
+    ],
+    "y_values_80": [
+      5405.087890625,
+      5431.63232421875,
+      5472.73046875,
+      5562.9296875,
+      5743.27734375,
+      6109.17919921875,
+      6828.947265625,
+      8273.04296875,
+      11158.4169921875
+    ],
+    "timestamp": "2026-04-08 17:14:43",
+    "kernel_operation_mode": "backward",
+    "extra_benchmark_config_str": "{\"sweep_dim\": \"T\", \"T\": null, \"E\": 128, \"H\": 2048, \"intermediate_dim\": 768, \"K\": 8, \"dtype\": \"torch.bfloat16\"}",
+    "liger_version": "0.7.0"
+  }
+]
